@@ -1,0 +1,14 @@
+.env
+uploads/
+frontend/node_modules/
+frontend/dist/
+frontend/.npm-cache/
+backend/.pytest_cache/
+backend/.test-deps/
+backend/.unit-deps/
+backend/.audit-deps/
+backend/.audit-cache/
+backend/.pip-cache/
+backend/**/__pycache__/
+*.py[cod]
+benchmark-report.json

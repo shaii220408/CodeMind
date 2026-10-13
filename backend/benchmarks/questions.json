@@ -1,0 +1,14 @@
+[
+  {
+    "question": "Where is retry logic implemented?",
+    "expected_sources": ["src/NotificationService.java"]
+  },
+  {
+    "question": "Which component publishes notifications to Kafka?",
+    "expected_sources": ["src/KafkaProducer.java"]
+  },
+  {
+    "question": "Where is authentication implemented?",
+    "expected_sources": ["src/AuthService.py"]
+  }
+]
