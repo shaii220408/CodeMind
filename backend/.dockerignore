@@ -1,0 +1,8 @@
+.audit-cache/
+.audit-deps/
+.test-deps/
+__pycache__/
+*.pyc
+.pytest_cache/
+.unit-deps
+
