@@ -17,7 +17,13 @@ try:
     import tree_sitter_python as tspython
     import tree_sitter_javascript as tsjs
     import tree_sitter_typescript as tsts
-    LANGS = {"python": Language(tspython.language()), "javascript": Language(tsjs.language()), "typescript": Language(tsts.language_typescript())}
+    import tree_sitter_java as tsjava
+    LANGS = {
+        "python": Language(tspython.language()),
+        "javascript": Language(tsjs.language()),
+        "typescript": Language(tsts.language_typescript()),
+        "java": Language(tsjava.language()),
+    }
 except Exception:
     LANGS = {}
 

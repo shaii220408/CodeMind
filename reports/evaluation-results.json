@@ -1,0 +1,646 @@
+{
+  "evaluation_type": "retrieval-only against live PostgreSQL/pgvector and lexical index; no Gemini generations scored",
+  "sample_size": 50,
+  "answerable_questions": 34,
+  "unanswerable_questions": 16,
+  "metrics": {
+    "recall_at_5": 0.9706,
+    "mrr": 0.9265,
+    "unanswerable_retrieval_abstention_proxy_rate": 0.75,
+    "retrieval_latency_ms_mean": 128.8,
+    "retrieval_latency_ms_p50": 15.7,
+    "retrieval_latency_ms_p95": 21.2,
+    "answer_correctness": null,
+    "groundedness": null,
+    "citation_precision": null,
+    "citation_coverage": null,
+    "unsupported_question_handling_accuracy": null
+  },
+  "provider_verification": {
+    "configured": true,
+    "live_grounded_request": "HTTP 504 from Gemini; no answer produced",
+    "semantic_evaluation": "BLOCKED because provider did not return before its request deadline"
+  },
+  "limitations": [
+    "Recall/MRR include only 34 answerable questions.",
+    "Unanswerable retrieval proxy is not an API abstention-mode score.",
+    "Citation and semantic metrics are not scored because no live Gemini response was returned.",
+    "The evaluated snapshot contains two Java source files from the safe sample repository."
+  ],
+  "results": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "latency_ms": 5516.2,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 3
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "latency_ms": 15.8,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "latency_ms": 16.7,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "latency_ms": 16.7,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "latency_ms": 16.4,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "latency_ms": 21.2,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "latency_ms": 13.4,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "latency_ms": 15.6,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "latency_ms": 17.5,
+      "retrieved_files": [],
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "latency_ms": 14.3,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q11",
+      "answerable": true,
+      "latency_ms": 15.5,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q12",
+      "answerable": true,
+      "latency_ms": 14.2,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q13",
+      "answerable": true,
+      "latency_ms": 15.9,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q14",
+      "answerable": true,
+      "latency_ms": 15.4,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q15",
+      "answerable": true,
+      "latency_ms": 169.3,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q16",
+      "answerable": true,
+      "latency_ms": 16.1,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q17",
+      "answerable": true,
+      "latency_ms": 14.3,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q18",
+      "answerable": true,
+      "latency_ms": 15.8,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q19",
+      "answerable": true,
+      "latency_ms": 14.6,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q20",
+      "answerable": true,
+      "latency_ms": 18.4,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q21",
+      "answerable": true,
+      "latency_ms": 15.3,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q22",
+      "answerable": true,
+      "latency_ms": 15.9,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q23",
+      "answerable": true,
+      "latency_ms": 17.5,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q24",
+      "answerable": true,
+      "latency_ms": 11.7,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q25",
+      "answerable": true,
+      "latency_ms": 15.7,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q26",
+      "answerable": true,
+      "latency_ms": 14.5,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/KafkaProducer.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q27",
+      "answerable": true,
+      "latency_ms": 16.7,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q28",
+      "answerable": true,
+      "latency_ms": 14.8,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q29",
+      "answerable": true,
+      "latency_ms": 13.0,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 2
+    },
+    {
+      "id": "q30",
+      "answerable": true,
+      "latency_ms": 14.8,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q31",
+      "answerable": true,
+      "latency_ms": 13.7,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q32",
+      "answerable": true,
+      "latency_ms": 16.5,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 1
+    },
+    {
+      "id": "q33",
+      "answerable": true,
+      "latency_ms": 17.7,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q34",
+      "answerable": true,
+      "latency_ms": 15.8,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "evidence_above_threshold": 0
+    },
+    {
+      "id": "q35",
+      "answerable": false,
+      "latency_ms": 17.9,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q36",
+      "answerable": false,
+      "latency_ms": 15.7,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java",
+        "src/KafkaProducer.java"
+      ],
+      "evidence_above_threshold": 1,
+      "retrieval_abstention_proxy": false
+    },
+    {
+      "id": "q37",
+      "answerable": false,
+      "latency_ms": 14.9,
+      "retrieved_files": [],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q38",
+      "answerable": false,
+      "latency_ms": 16.3,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q39",
+      "answerable": false,
+      "latency_ms": 19.3,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q40",
+      "answerable": false,
+      "latency_ms": 14.7,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/KafkaProducer.java",
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 1,
+      "retrieval_abstention_proxy": false
+    },
+    {
+      "id": "q41",
+      "answerable": false,
+      "latency_ms": 13.3,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 2,
+      "retrieval_abstention_proxy": false
+    },
+    {
+      "id": "q42",
+      "answerable": false,
+      "latency_ms": 14.2,
+      "retrieved_files": [],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q43",
+      "answerable": false,
+      "latency_ms": 15.7,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q44",
+      "answerable": false,
+      "latency_ms": 14.7,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 1,
+      "retrieval_abstention_proxy": false
+    },
+    {
+      "id": "q45",
+      "answerable": false,
+      "latency_ms": 14.8,
+      "retrieved_files": [],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q46",
+      "answerable": false,
+      "latency_ms": 16.8,
+      "retrieved_files": [
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q47",
+      "answerable": false,
+      "latency_ms": 14.6,
+      "retrieved_files": [
+        "src/KafkaProducer.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q48",
+      "answerable": false,
+      "latency_ms": 13.6,
+      "retrieved_files": [],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q49",
+      "answerable": false,
+      "latency_ms": 14.9,
+      "retrieved_files": [
+        "src/NotificationService.java",
+        "src/NotificationService.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    },
+    {
+      "id": "q50",
+      "answerable": false,
+      "latency_ms": 19.4,
+      "retrieved_files": [
+        "src/KafkaProducer.java"
+      ],
+      "evidence_above_threshold": 0,
+      "retrieval_abstention_proxy": true
+    }
+  ],
+  "provider_followup": {
+    "model": "gemini-3.8-flash",
+    "configured_timeout_seconds": 30,
+    "key_presence_checked_without_revealing_value": true,
+    "minimal_real_request": {
+      "status": 200,
+      "elapsed_seconds": 7.06,
+      "response_present": true
+    },
+    "grounded_real_request": {
+      "status": 504,
+      "elapsed_seconds": 33.98,
+      "sanitized_api_detail": "Gemini did not finish before the request deadline."
+    },
+    "live_ui_grounded_attempt": {
+      "provider_statuses": [
+        503,
+        503
+      ],
+      "seconds_between_statuses": 6.51,
+      "user_action": "Stop waiting",
+      "answer_generated": false
+    },
+    "prior_instrumented_timing": {
+      "retrieval_seconds": 5.906,
+      "generation_seconds": 29.027,
+      "total_seconds": 34.95,
+      "note": "Earlier warmed request; distinct from later cold request timing."
+    },
+    "timeout_classification": "The grounded request received upstream HTTP 504 before a local SDK timeout exception; provider 503/504 responses are explicit.",
+    "bounded_retry": "At most one retry for transient 500/502/503, 0.5 seconds backoff, only if remaining time fits the 39-second frontend budget; no retry for 429/504/timeouts.",
+    "quota_signal": "No 429 or quota metadata observed; provider response body intentionally not retained. Minimal success confirms model/key access at that moment, not quota headroom.",
+    "real_answer_generated": false,
+    "generation_evaluation": "BLOCKED; no generation metrics scored",
+    "environment_file_changed": false
+  }
+}

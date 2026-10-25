@@ -1,0 +1,82 @@
+{
+  "project_id": "eda32a3c-3787-4144-bc15-0e2677a05e37",
+  "api_url": "http://localhost:8000",
+  "k": 5,
+  "question_count": 4,
+  "warmup_latency_ms": 20928.0,
+  "metrics": {
+    "recall_at_k": 1.0,
+    "mrr": 1.0,
+    "citation_accuracy": 0.8333,
+    "answers_with_correct_citation_rate": 1.0,
+    "latency_ms_mean": 31.8,
+    "latency_ms_p50": 31.8,
+    "latency_ms_p95": 37.5
+  },
+  "definitions": {
+    "recall_at_k": "Per-question fraction of labelled relevant files present in the top K retrieved sources, averaged over questions.",
+    "mrr": "Mean reciprocal rank of the first retrieved source matching a labelled relevant file.",
+    "citation_accuracy": "File-level precision: distinct relevant cited files divided by all distinct cited files.",
+    "answers_with_correct_citation_rate": "Fraction of answers containing at least one citation to a labelled relevant file.",
+    "latency": "Mean/percentile values are measured after one warmup request; warmup_latency_ms reports that first call separately."
+  },
+  "results": [
+    {
+      "id": "auth_method",
+      "latency_ms": 37.5,
+      "relevant_files": [
+        "src/authservice.py"
+      ],
+      "retrieved_files": [
+        "src/authservice.py",
+        "src/authservice.py"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_correct": true
+    },
+    {
+      "id": "kafka_publisher",
+      "latency_ms": 31.8,
+      "relevant_files": [
+        "src/kafkaproducer.java"
+      ],
+      "retrieved_files": [
+        "src/kafkaproducer.java"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_correct": true
+    },
+    {
+      "id": "notification_retry",
+      "latency_ms": 29.6,
+      "relevant_files": [
+        "src/notificationservice.java"
+      ],
+      "retrieved_files": [
+        "src/notificationservice.java",
+        "src/kafkaproducer.java"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_correct": true
+    },
+    {
+      "id": "notification_dependency",
+      "latency_ms": 28.3,
+      "relevant_files": [
+        "src/kafkaproducer.java",
+        "src/notificationservice.java"
+      ],
+      "retrieved_files": [
+        "src/notificationservice.java",
+        "src/notificationservice.java",
+        "src/kafkaproducer.java"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "citation_correct": true
+    }
+  ]
+}

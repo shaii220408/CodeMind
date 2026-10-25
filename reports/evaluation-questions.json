@@ -1,0 +1,1195 @@
+[
+  {
+    "id": "q01",
+    "question": "Which Java package declares KafkaProducer?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "KafkaProducer belongs to package sample.service.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "sample.service"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q02",
+    "question": "Which Java package declares NotificationService?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "NotificationService belongs to package sample.service.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "sample.service"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q03",
+    "question": "What does KafkaProducer.publish do with the message?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "It writes a notification-prefixed version of the supplied message to standard output.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 6
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "System.out.println",
+        "message"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 6
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q04",
+    "question": "What method handles a notification in NotificationService?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "The method is retryNotification.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retryNotification"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q05",
+    "question": "What parameter type does publish accept?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "publish accepts one String parameter.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "String",
+        "message"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q06",
+    "question": "Does publish return a value?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "No. Its declared return type is void.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "void"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q07",
+    "question": "Where does publish write its output?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "It writes with System.out.println.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "System.out.println"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q08",
+    "question": "What text prefix is added before the message in publish?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "The output prefix is Publishing notification: .",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "Publishing notification:"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q09",
+    "question": "Which value is appended to the output prefix?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "The method appends its message parameter.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "message"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q10",
+    "question": "Which class declares the publish method?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "KafkaProducer declares publish.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "KafkaProducer",
+        "publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q11",
+    "question": "Which dependency does NotificationService store?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It stores a KafkaProducer dependency.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 3,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "KafkaProducer",
+        "producer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 3,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q12",
+    "question": "How is the producer field declared?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "The field is private and final, with type KafkaProducer.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "private",
+        "final",
+        "KafkaProducer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q13",
+    "question": "What parameters does the NotificationService constructor receive?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It receives one KafkaProducer parameter named producer.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "KafkaProducer",
+        "producer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q14",
+    "question": "How does the constructor initialize the producer field?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It assigns the argument to this.producer.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "this.producer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q15",
+    "question": "What condition controls the publish call in retryNotification?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "The call is inside a condition checking retries < 3.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retries < 3"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q16",
+    "question": "At retries equal to 2, does retryNotification call publish?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "Yes. Two is below three, so the guarded call runs.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retries < 3",
+        "producer.publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q17",
+    "question": "At retries equal to 3, does retryNotification call publish?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "No. The condition retries < 3 is false at three.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retries < 3",
+        "producer.publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q18",
+    "question": "At retries equal to 4, does retryNotification call publish?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "No. Four is not less than three.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retries < 3"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q19",
+    "question": "Which argument is passed from retryNotification to publish?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "The message parameter is passed unchanged.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "producer.publish(message)"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q20",
+    "question": "How many publish invocations appear in the guarded body?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "There is one publish invocation in that body.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 8,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "producer.publish(message)"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 8,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q21",
+    "question": "Is the producer call conditional or unconditional?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It is conditional on retries being less than three.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "if",
+        "retries < 3",
+        "producer.publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q22",
+    "question": "Does retryNotification increment its retries parameter?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "No increment is present in the method body; it only checks retries and conditionally publishes.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retries < 3",
+        "producer.publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q23",
+    "question": "Does retryNotification use a loop for repeated publishing?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "No loop is present; the shown body contains a single if and one publish call.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "if",
+        "producer.publish"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q24",
+    "question": "What is the declared return type of retryNotification?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It returns void.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 7
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "void"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 7
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q25",
+    "question": "Which source file contains retryNotification?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "It is in src/NotificationService.java.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 3,
+        "end_line": 12
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retryNotification"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 3,
+        "end_line": 12
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q26",
+    "question": "Which class performs the output operation used by the notification service?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "KafkaProducer performs the output operation in publish.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 6
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "KafkaProducer",
+        "System.out.println"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 6
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q27",
+    "question": "Describe the statically visible data flow from retryNotification to output.",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "NotificationService passes its message argument to KafkaProducer.publish, which writes a prefixed string to standard output.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "producer.publish(message)"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 10
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q28",
+    "question": "Do both Java classes declare the same package?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "Yes. Both declare sample.service.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "sample.service"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 1,
+        "end_line": 1
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q29",
+    "question": "What is the publish method signature?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "public void publish(String message).",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "public",
+        "void",
+        "publish",
+        "String"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q30",
+    "question": "Which line shows the injected producer being stored?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "The constructor assigns this.producer = producer on line 5.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "this.producer = producer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q31",
+    "question": "Does retryNotification catch exceptions?",
+    "relevant_files": [
+      "src/NotificationService.java"
+    ],
+    "expected_answer": "No catch block is shown in the method.",
+    "evidence": [
+      {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "retryNotification"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/NotificationService.java",
+        "start_line": 7,
+        "end_line": 11
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q32",
+    "question": "What output statement is in KafkaProducer.publish?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "It uses System.out.println with a concatenated string.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "System.out.println"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 5,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q33",
+    "question": "Is the message output built from the method argument or a different local value?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "It is concatenated from the method argument named message.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 5
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "message"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 4,
+        "end_line": 5
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q34",
+    "question": "What is the file path for the class that owns publish?",
+    "relevant_files": [
+      "src/KafkaProducer.java"
+    ],
+    "expected_answer": "The path is src/KafkaProducer.java.",
+    "evidence": [
+      {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 4
+      }
+    ],
+    "scoring_criteria": {
+      "must_include": [
+        "KafkaProducer"
+      ],
+      "citation_required": true,
+      "citation_must_cover": {
+        "file": "src/KafkaProducer.java",
+        "start_line": 3,
+        "end_line": 4
+      }
+    },
+    "answerable": true,
+    "expected_mode": "llm"
+  },
+  {
+    "id": "q35",
+    "question": "What Kafka broker address does this repository configure?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: the indexed files contain no broker address.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "broker configuration",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q36",
+    "question": "Which Kafka topic does the producer publish to?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no topic name is present in the indexed files.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "topic name",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q37",
+    "question": "What consumer group ID receives these notifications?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no consumer or group ID is present.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "consumer group",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q38",
+    "question": "What backoff duration is used between retries?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no backoff duration or waiting logic is shown.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "backoff duration",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q39",
+    "question": "Where is a maximum attempt count configured separately from the retries comparison?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no separate retry configuration is present.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "attempt configuration",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q40",
+    "question": "Does the code retry after KafkaProducer.publish fails?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: the code does not show publish failure results or a second attempt.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "publish failure retry",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q41",
+    "question": "Does publish send the message over a network to a Kafka broker?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: the indexed implementation only shows standard-output writing.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "network transport",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q42",
+    "question": "What serialization format is used for messages?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no serialization code or format is shown.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "serialization format",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q43",
+    "question": "Does NotificationService persist notifications to a database?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no persistence operation appears in these indexed files.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "database persistence",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q44",
+    "question": "Which exception is thrown if the producer dependency is null?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no null check or documented exception is shown.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "null exception",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q45",
+    "question": "Which Kafka client library version is declared by the build?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no build manifest or dependency version is in the indexed files.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "library version",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q46",
+    "question": "Does retryNotification use a framework retry annotation?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no such annotation is visible in the indexed source.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "retry annotation",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q47",
+    "question": "Does publish wait for a broker acknowledgement?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no broker operation or acknowledgement is shown.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "broker acknowledgement",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q48",
+    "question": "Which method consumes the published notifications?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: no consumer class or method is indexed.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "consumer method",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q49",
+    "question": "What credentials authenticate the Kafka producer?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: the indexed Java sources do not show Kafka authentication configuration.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "producer credentials",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  },
+  {
+    "id": "q50",
+    "question": "Is publishing asynchronous or synchronous with respect to a broker?",
+    "relevant_files": [],
+    "expected_answer": "Insufficient evidence: broker transport and async behavior are not shown.",
+    "evidence": [],
+    "scoring_criteria": {
+      "must_abstain": true,
+      "must_not_invent": "async broker behavior",
+      "citation_required": false
+    },
+    "answerable": false,
+    "expected_mode": "abstention"
+  }
+]

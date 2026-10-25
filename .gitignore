@@ -1,10 +1,40 @@
+# Backend and provider secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Local runtime data and generated artifacts
+uploads/
+postgres/data/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Python
 .venv/
 venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# JavaScript tooling and builds
 node_modules/
 dist/
-.pytest_cache/
+build/
+.npm-cache/
+
+# Local IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

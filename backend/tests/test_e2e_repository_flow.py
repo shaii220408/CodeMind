@@ -11,6 +11,7 @@ from app.db.session import SessionLocal
 from app.main import app
 from app.models.models import Project
 from app.services.rate_limit import limit_ask_requests, limit_dependency_requests, limit_upload_requests
+from app.services.llm import AnswerResult
 
 
 def test_upload_index_dependency_search_and_cited_ask(monkeypatch, tmp_path):
@@ -26,7 +27,11 @@ def test_upload_index_dependency_search_and_cited_ask(monkeypatch, tmp_path):
     monkeypatch.setattr(routes.index_project, "apply_async", capture_task)
     monkeypatch.setattr(
         routes, "answer",
-        lambda _question, evidence: f"Found {evidence[0]['symbol']} in {evidence[0]['file']}." if evidence else "Insufficient evidence.",
+        lambda _question, evidence: AnswerResult(
+            f"Found {evidence[0]['symbol']} in {evidence[0]['file']}." if evidence else "Insufficient evidence.",
+            "fallback" if evidence else "abstention",
+            [{"file": evidence[0]["file"], "start_line": evidence[0]["start_line"], "end_line": evidence[0]["end_line"], "symbol": evidence[0]["symbol"]}] if evidence else [],
+        ),
     )
     app.dependency_overrides[limit_ask_requests] = lambda: None
     app.dependency_overrides[limit_dependency_requests] = lambda: None
@@ -65,6 +70,9 @@ def test_upload_index_dependency_search_and_cited_ask(monkeypatch, tmp_path):
             files = client.get(f"/api/projects/{project_id}/files")
             assert files.status_code == 200
             assert len(files.json()) == 2
+            source = client.get(f"/api/projects/{project_id}/files/src/NotificationService.java")
+            assert source.status_code == 200
+            assert "retryNotification" in source.json()["content"]
 
             edges = client.get(f"/api/projects/{project_id}/dependencies?target=NotificationService")
             assert edges.status_code == 200

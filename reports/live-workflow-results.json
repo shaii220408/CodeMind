@@ -1,0 +1,212 @@
+{
+  "audit_date": "2026-10-25",
+  "sample_corpus": [
+    "src/NotificationService.java",
+    "src/KafkaProducer.java"
+  ],
+  "indexing": {
+    "status": "PASS",
+    "documents": 2,
+    "chunks": 4,
+    "worker_job": "completed"
+  },
+  "knowledge_graph": {
+    "status": "PASS",
+    "nodes": 9,
+    "edges": 9,
+    "search": {
+      "symbol": "retryNotification",
+      "path": "src/NotificationService.java",
+      "start_line": 7,
+      "end_line": 11
+    },
+    "source_navigation": "verified"
+  },
+  "impact_analysis": {
+    "status": "PARTIAL",
+    "http_status": 200,
+    "completeness": "partial",
+    "unresolved_calls": [
+      "println",
+      "publish"
+    ],
+    "transitive_java_impact": "not verified"
+  },
+  "code_review": {
+    "status": "PASS",
+    "scan": "completed",
+    "findings": 0,
+    "interpretation": "no configured rule matched; not a safety claim"
+  },
+  "health": {
+    "status": "PASS",
+    "files": 2,
+    "source_lines": 16,
+    "classes": 2,
+    "modules": 2,
+    "languages": {
+      "java": 2
+    },
+    "review_findings": 0,
+    "dependency_hotspots": 0,
+    "duplicates": 0,
+    "python_complexity": null,
+    "test_coverage": null
+  },
+  "documentation": {
+    "status": "PASS",
+    "generated_documents": 6,
+    "kinds": [
+      "api",
+      "architecture",
+      "module",
+      "overview",
+      "setup"
+    ],
+    "preview_http": 200,
+    "markdown_export_http": 200,
+    "export_content_type": "text/markdown",
+    "export_bytes": 221
+  },
+  "github_sync": {
+    "status": "PASS",
+    "repository": "https://github.com/octocat/Hello-World",
+    "branch": "master",
+    "method": "actual API and Celery worker",
+    "sync_status": "SYNCED",
+    "commit_sha_present": true,
+    "private_repository_tested": false,
+    "browser_button_tested": false
+  },
+  "history": {
+    "status": "PASS for abstention",
+    "reloaded_mode": "abstention",
+    "citation_count": 0,
+    "llm_mode_history": "BLOCKED by provider error"
+  },
+  "browser_upload": {
+    "status": "NOT VERIFIED",
+    "ui_message": "Failed to fetch",
+    "observed_api_requests": "OPTIONS 200; no POST observed",
+    "direct_api_upload": "passed",
+    "root_cause": "unresolved"
+  },
+  "visual_qa": {
+    "status": "PASS targeted",
+    "viewports": [
+      "1366x768",
+      "1920x1080",
+      "390x844"
+    ],
+    "overview_and_empty_graph": "checked at all three",
+    "populated_graph_and_source": "checked at 1920x1080",
+    "confirmed_fixes": [
+      "empty graph no longer says Loading after load",
+      "graph summary/control styling and spacing",
+      "existing snapshot upload copy"
+    ],
+    "full_route_matrix": "not performed"
+  },
+  "cleanup": {
+    "status": "BLOCKED",
+    "reason": "automatic safety review rejected deleting the synthetic visual-QA project/account; data preserved and no alternate deletion path attempted"
+  },
+  "regression": {
+    "backend": "63 passed, 156 warnings",
+    "frontend": "4 files, 11 tests passed",
+    "production_build": "passed",
+    "api_ready": 200,
+    "celery_ping": "pong",
+    "alembic": "0007_review_health_docs (head)"
+  },
+  "secrets": "No API key or environment secret recorded; project .env was not changed.",
+  "stabilization_followup": {
+    "browser_origin": "http://localhost:5174",
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "timeout_seconds": 30,
+      "key_presence_only": true,
+      "minimal_request": {
+        "status": 200,
+        "seconds": 7.06,
+        "response_present": true
+      },
+      "grounded_request": {
+        "status": 504,
+        "seconds": 33.98,
+        "classification": "upstream response before local timeout"
+      },
+      "canceled_ui_request_provider_statuses": [
+        503,
+        503
+      ],
+      "no_answer_or_citations": true,
+      "generation_metrics": "null; not evaluated"
+    },
+    "upload": {
+      "status": "PASS",
+      "origin": "http://localhost:5174",
+      "cors_pna_before": {
+        "status": 400,
+        "detail": "Disallowed CORS private-network"
+      },
+      "cors_pna_after": {
+        "status": 200,
+        "allow_private_network": "true",
+        "origin_allowlist_remains_explicit": true
+      },
+      "browser_api_sequence": [
+        "OPTIONS 200",
+        "POST /api/projects/{id}/upload 200"
+      ],
+      "worker": "completed",
+      "indexed_files": 2,
+      "chunks": 4,
+      "browser_console_errors": 0,
+      "limitation": "Full DevTools Network request-header pane was unavailable; PNA rejection reproduced with direct preflight."
+    },
+    "java_impact": {
+      "test_repo": [
+        "Base.java",
+        "Middle.java",
+        "Top.java"
+      ],
+      "direct": {
+        "dependent": "impact.Middle.run",
+        "depth": 1,
+        "resolution": "inferred"
+      },
+      "transitive": {
+        "dependent": "impact.Top.execute",
+        "depth": 2,
+        "resolution": "inferred"
+      },
+      "unresolved_types": [
+        "instance-variable receiver typing",
+        "ambiguous overloads",
+        "reflection/dynamic dispatch",
+        "external dependencies"
+      ]
+    },
+    "github_ui_sync": {
+      "status": "SYNCED",
+      "repository": "https://github.com/octocat/Hello-World",
+      "branch": "master",
+      "commit_sha": "7fd1a60b01f91b314f59955a4e4d4e80d8edf11d",
+      "worker_seconds": 1.62,
+      "supported_source_files": 0
+    },
+    "ui_controls": {
+      "cancel": "PASS; spinner exited and safe cooldown shown",
+      "duplicate_same_tab": "PASS; Ctrl+Enter did not launch another ask sequence",
+      "retry": "Automatic 503 retry verified; manual retry button click not performed",
+      "cross_tab_concurrency": "NOT VERIFIED"
+    },
+    "regression": {
+      "backend": "67 passed, 169 warnings",
+      "frontend": "4 files, 11 tests passed",
+      "production_build": "passed"
+    },
+    "data_preservation": "No synthetic test account/project was deleted; .env untouched; no secret values recorded."
+  }
+}

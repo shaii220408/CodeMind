@@ -1,0 +1,17 @@
+{
+  "corpus": "Desktop sample_repo; an isolated snapshot with two Java files. A separate credential-like demo file was excluded from provider context.",
+  "files": {
+    "src/KafkaProducer.java": {
+      "sha256": "31a91124373e76c652dc7986ed7e256c05a0350837b8cff3ede06570ef45f6a4",
+      "lines": 7
+    },
+    "src/NotificationService.java": {
+      "sha256": "75290766a141efe8ca187cd73dd858a6b2cc0f6fc3139e80d977e2c18f4927ac",
+      "lines": 12
+    }
+  },
+  "question_count": 50,
+  "answerable": 34,
+  "unanswerable_or_absent": 16,
+  "generated_at": "2026-10-25"
+}

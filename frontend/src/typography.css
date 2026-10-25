@@ -1,0 +1,152 @@
+:root {
+  --font-sans: 'DM Sans', sans-serif;
+  --type-body: 16px;
+  --type-ui: 14px;
+  --type-meta: 13px;
+  --type-code: 13px;
+  --type-card-title: 18px;
+  --type-page-title: 28px;
+  --line-body: 1.5;
+}
+
+body {
+  font-size: var(--type-body);
+  line-height: var(--line-body);
+}
+
+.page-heading h1,
+.auth-card h1 {
+  font-size: var(--type-page-title);
+  line-height: 1.2;
+}
+
+.panel-heading h2,
+.files-heading h2,
+.ingest-copy h2,
+.insights-header h2,
+.insights-subhead h3,
+.health-grid h4 {
+  font-size: var(--type-card-title);
+  line-height: 1.3;
+}
+
+.panel-description,
+.answer-text,
+.finding-card > p,
+.ai-explanation,
+.insights-subhead p,
+.metric-definition {
+  font-size: var(--type-ui);
+  line-height: 1.55;
+}
+
+.project-link,
+.side-search input,
+.file-search input,
+.sidebar-create input,
+.primary-button,
+.file-picker,
+.file-picker span,
+.question-footer button,
+.prompt-list button,
+.welcome-actions input,
+.welcome-actions button,
+.dependency-search input,
+.dependency-search button,
+.impact-control select,
+.impact-control button,
+.graph-controls input,
+.graph-controls select,
+.graph-header button,
+.graph-selection button,
+.graph-zoom button,
+.assistant-quick-actions input,
+.assistant-quick-actions button,
+.source-open,
+.github-sync label,
+.github-sync input,
+.github-sync button,
+.insights-actions button,
+.insights-tabs button,
+.finding-filters select,
+.finding-filters input,
+.finding-footer button,
+.docs-list button,
+.docs-preview header button,
+.insights-error button,
+.auth-card form input,
+.auth-submit,
+.auth-switch button,
+.sign-out,
+.source-viewer header button {
+  font-size: var(--type-ui);
+}
+
+.source-card pre,
+.source-viewer > pre,
+.finding-card > pre,
+.docs-preview > pre,
+.file-path,
+.graph-relationships,
+.graph-name,
+.graph-kind,
+.graph-edge text {
+  font-size: var(--type-code);
+}
+
+.stat-card small,
+.stat-top,
+.status-badge,
+.side-label,
+.eyebrow,
+.crumb,
+.top-tag,
+.avatar,
+.answer-heading small,
+.line-ref,
+.file-language,
+.file-type,
+.file-foot,
+.graph-note,
+.graph-state,
+.graph-impact,
+.finding-category,
+.severity-pill,
+.finding-footer,
+.analysis-state,
+.origin-pill,
+.docs-list small {
+  font-size: var(--type-meta);
+}
+
+.page-heading h1 {
+  font-size: clamp(24px, 2.1vw, var(--type-page-title));
+}
+
+.file-picker {
+  min-height: 46px;
+  height: auto;
+}
+
+.stat-card small {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .page-heading h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .page-heading p {
+    font-size: var(--type-meta);
+  }
+
+  .prompt-list button {
+    font-size: var(--type-ui);
+  }
+}

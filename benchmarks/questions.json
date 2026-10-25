@@ -1,0 +1,22 @@
+[
+  {
+    "id": "auth_method",
+    "question": "How does AuthService authenticate a user?",
+    "relevant_files": ["src/AuthService.py"]
+  },
+  {
+    "id": "kafka_publisher",
+    "question": "Where is a notification published to Kafka?",
+    "relevant_files": ["src/KafkaProducer.java"]
+  },
+  {
+    "id": "notification_retry",
+    "question": "How does retryNotification decide whether to publish a notification?",
+    "relevant_files": ["src/NotificationService.java"]
+  },
+  {
+    "id": "notification_dependency",
+    "question": "Which component publishes the message used by NotificationService?",
+    "relevant_files": ["src/KafkaProducer.java", "src/NotificationService.java"]
+  }
+]
